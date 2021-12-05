@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.primary_bg {
+  background: linear-gradient(90deg, #032A69 0%, #0E8A8A 100%);
+}
+
+
+
