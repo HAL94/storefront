@@ -1,15 +1,13 @@
 import TopBar from "./TopBar/TopBar";
-import MiddleBar from './MiddleBar/MiddleBar';
-// import BottomBar from "./BottomBar/BottomBar";
-import BottomBarTemp from "./BottomBarTemp/BottomBarTemp";
+import MiddleBar from "./MiddleBar/MiddleBar";
+import BottomBar from "./BottomBar/BottomBar";
 
 const Header = (props) => {
     return (
         <header className="p-20">
             <TopBar/>
             <MiddleBar/>
-            {/* <BottomBar/> */}
-            <BottomBarTemp/>
+            <BottomBar/>
         </header>
     );
 }
