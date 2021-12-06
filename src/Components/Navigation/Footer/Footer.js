@@ -78,7 +78,7 @@ function Footer() {
       </Container>
 
       <div className={classes["copyrights"]}>
-        <Container>
+        <Container fluid>
           <Row>
             <Col sm={6}>
               <div className={classes["copyright_left"]}>
@@ -94,8 +94,10 @@ function Footer() {
                 </div>
               </div>
             </Col>
-            <Col sm={6} className="text-end">
-              sdfsd
+            <Col sm={6}>
+              <div className={classes["copyright_right"]}>
+                <p>© 2021 Ramzaula. All Rights Reserved</p>
+              </div>
             </Col>
           </Row>
         </Container>
