@@ -1,0 +1,11 @@
+.search-field-item {
+    flex: .6 1 auto;
+    margin-right: 42px;
+    margin-left: 29px;
+}
+
+@media only screen and (max-width: 991px) {
+    .responsive_search_field_item {
+        margin-bottom: 1rem !important;
+    }
+}
