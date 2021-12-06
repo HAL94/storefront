@@ -6,3 +6,12 @@ body {
 .primary_bg {
   background: linear-gradient(90deg, #032a69 0%, #0e8a8a 100%);
 }
+
+.filter_title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}

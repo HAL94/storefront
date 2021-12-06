@@ -1,13 +1,13 @@
 import React from "react";
 import classes from "./Footerbar.module.css";
-import Logo from "../../../../src/Assets/logo_white.svg";
-import Googleplay from "../../../../src/Assets/Google-Play.svg";
-import Applestore from "../../../../src/Assets/Apple-Store.svg";
-import Mada from "../../../../src/Assets/mada.svg";
-import instagram from "../../../../src/Assets/instagram_icn.svg";
-import Mastercard from "../../../../src/Assets/MasterCard.svg";
-import stcpay from "../../../../src/Assets/stcpay.svg";
-import visalogo from "../../../../src/Assets/Visa_logo.svg";
+import Logo from "Assets/logo_white.svg";
+// import Applestore from "Assets/Apple-Store.svg";
+// import Googleplay from "Assets/Google-Play.svg";
+import Mada from "Assets/mada.svg";
+// import instagram from "Assets/instagram_icn.svg";
+import Mastercard from "Assets/MasterCard.svg";
+import stcpay from "Assets/stcpay.svg";
+import visalogo from "Assets/Visa_logo.svg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -20,7 +20,7 @@ function Footer() {
       <Container>
         <Row>
           <Col>
-            <img src={Logo} alt="" srcset="" />
+            <img src={Logo} alt="" />
           </Col>
           <Col>
             <Form>
@@ -84,12 +84,12 @@ function Footer() {
               <div className={classes["copyright_left"]}>
                 <p>Pay Securely with us</p>
                 <div>
-                  <img src={visalogo} alt="" srcset="" /> &nbsp;
-                  <img src={Mastercard} alt="" srcset="" />
+                  <img src={visalogo} alt="" /> &nbsp;
+                  <img src={Mastercard} alt="" />
                   &nbsp;
-                  <img src={stcpay} alt="" srcset="" />
+                  <img src={stcpay} alt="" />
                   &nbsp;
-                  <img src={Mada} alt="" srcset="" />
+                  <img src={Mada} alt="" />
                   &nbsp;
                 </div>
               </div>
