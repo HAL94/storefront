@@ -1,6 +1,13 @@
 import React from "react";
 import classes from "./Footerbar.module.css";
 import Logo from "../../../../src/Assets/logo_white.svg";
+import Googleplay from "../../../../src/Assets/Google-Play.svg";
+import Applestore from "../../../../src/Assets/Apple-Store.svg";
+import Mada from "../../../../src/Assets/mada.svg";
+import instagram from "../../../../src/Assets/instagram_icn.svg";
+import Mastercard from "../../../../src/Assets/MasterCard.svg";
+import stcpay from "../../../../src/Assets/stcpay.svg";
+import visalogo from "../../../../src/Assets/Visa_logo.svg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -70,15 +77,29 @@ function Footer() {
         </Row>
       </Container>
 
-      <div className={classes["copyrigts"]}></div>
-      <Container>
-        <Row>
-          <Col sm={6}>sdfsdf</Col>
-          <Col sm={6} className="text-end">
-            sdfsd
-          </Col>
-        </Row>
-      </Container>
+      <div className={classes["copyrights"]}>
+        <Container>
+          <Row>
+            <Col sm={6}>
+              <div className={classes["copyright_left"]}>
+                <p>Pay Securely with us</p>
+                <div>
+                  <img src={visalogo} alt="" srcset="" /> &nbsp;
+                  <img src={Mastercard} alt="" srcset="" />
+                  &nbsp;
+                  <img src={stcpay} alt="" srcset="" />
+                  &nbsp;
+                  <img src={Mada} alt="" srcset="" />
+                  &nbsp;
+                </div>
+              </div>
+            </Col>
+            <Col sm={6} className="text-end">
+              sdfsd
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }
