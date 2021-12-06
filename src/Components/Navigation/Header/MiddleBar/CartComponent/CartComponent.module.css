@@ -6,4 +6,8 @@
     .responsive_display_none {
         display: none !important;
     }
+
+    .responsive_justify_right {
+        justify-content: right;
+    }
 }

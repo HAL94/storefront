@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function CartComponent() {
     return (
-        <div className={`d-flex align-items-center`}>
+        <div className={`d-flex align-items-center ${classes['responsive_justify_right']}`}>
             <FontAwesomeIcon icon={faHeart} className={`mx-2 fs-2 ${classes['responsive_display_none']}`}></FontAwesomeIcon>
             <div className="cart d-flex align-items-center mx-3 cursor-pointer mx-2">
                 <div className="cart-icon mx-2">
