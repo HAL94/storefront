@@ -40,9 +40,17 @@
   color: white;
 }
 
-.copyright_left p .Sampletestingcss {
+/* .copyright_right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+} */
+
+.copyright_right p {
   font-size: 10px;
   margin-bottom: 0px;
   margin-right: 15px;
   color: white;
+  text-align: end;
+  margin-top: 8px;
 }
