@@ -9,7 +9,7 @@ import classes from './TopBar.module.css';
 
 const TopBar = (props) => {
     return (
-        <nav className={`navbar navbar-expand-lg navbar-light ${classes['custom-light-bg']}`}>
+        <nav className={`navbar navbar-expand-lg navbar-light ${classes['custom-light-bg']} ${classes['display_none']}`}>
             <div className="container-fluid">
                 <span className="top-bar-download">Order Online 24/7</span>
                 <div className="d-flex ml-auto">
