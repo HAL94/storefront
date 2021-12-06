@@ -1,10 +1,8 @@
-.btn {
-    color: #fff;
-    background-color: #FC9231;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: none;
-    border-radius: 20px;
-    width: 131px;
-    outline-style: none;
+.font_white {
+    color: #fff !important;
+}
+
+.buy_again_btn {
+    background: #FC9231 !important;
+    border-radius: 42px !important;
 }

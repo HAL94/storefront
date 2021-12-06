@@ -1,44 +1,39 @@
 import React from 'react'
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 import classes from './BottomBar.module.css';
+
 import { faGift } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function BottomBar() {
+function BottomBarTemp() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light primary_bg p-3">
-            <div className="container-fluid">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li className='nav-item'>
-                            <a className='nav-link' href="#!" style={{'color': '#fff'}}>ELECTRONICS</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link" href="#!" style={{'color': '#fff'}}>HOME & LIVING</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link" href="#!" style={{'color': '#fff'}}>COOKING</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link" href="#!" style={{'color': '#fff'}}>FRESH FOOD</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link" href="#!" style={{'color': '#fff'}}>BEVERAGES</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link" href="#!" style={{'color': '#fff'}}>DRINKS</a>
-                        </li>
-                    </ul>
-                </div>
-                <button className={`${classes['btn']} p-2`}>
-                    <FontAwesomeIcon icon={faGift} className="mx-2" />
-                    Buy Again
-                </button>
-            </div>
-        </nav>
+        <Navbar className="primary_bg" expand="lg">
+            <Container fluid>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home" className={`${classes['font_white']}`}>ELECTRONICS</Nav.Link>
+                        <Nav.Link href="#link" className={`${classes['font_white']}`}>HOME & LIVING</Nav.Link>
+                        <Nav.Link href="#link" className={`${classes['font_white']}`}>COOKING</Nav.Link>
+                        <Nav.Link href="#link" className={`${classes['font_white']}`}>FRESH FOOD</Nav.Link>
+                        <Nav.Link href="#link" className={`${classes['font_white']}`}>BEVERAGES</Nav.Link>
+                        <Nav.Link href="#link" className={`${classes['font_white']}`}>DRINKS</Nav.Link>
+                    </Nav>
+                    <Nav className="ms-auto">
+                        <Nav.Link href="#!">
+                            <Button className={`${classes['buy_again_btn']}`}>
+                                <FontAwesomeIcon icon={faGift} className="mx-2"></FontAwesomeIcon>
+                                Buy Again
+                            </Button>
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }
 
-export default BottomBar
+export default BottomBarTemp;

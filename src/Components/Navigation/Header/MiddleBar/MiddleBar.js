@@ -10,15 +10,13 @@ function MiddleBar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">                
-                <div className="navbar-nav me-auto left-navbar align-items-center flex-row">
+                <div className={`navbar-nav me-auto left-navbar align-items-center flex-row ${classes['responsive_md_navbar']}`}>
                     <a className="navbar-brand mx-3" href="#!">
                         <img src={Logo} alt={'Biz Basket'} />
                     </a>
                     <div className="delivery-location d-flex align-items-center mx-3 cursor-pointer">
                         <div className="delivery-icon mx-2">
                             <FontAwesomeIcon icon={faMapMarkerAlt} className="fs-2"></FontAwesomeIcon>
-                            {/* <FeatherIcon icon="close" fill="red" /> */}
-                            {/* <i data-feather="circle"></i> */}
                         </div>
                         <div className="delivery-description d-flex flex-column mx-2">
                             <span className={classes['delivery-title']}>Delivery To</span>
@@ -27,12 +25,12 @@ function MiddleBar() {
                         <FontAwesomeIcon icon={faChevronDown} className="mx-2"></FontAwesomeIcon>
                     </div>
                 </div>
-                <div className={`input-group ${classes['search-field-item']}`}>
+                <form className={`input-group ${classes['search-field-item']} ${classes['responsive_search_field_item']}`}>
                     <input type="text" className="form-control" placeholder="Search for stores, categories, products.." aria-label="Search Products"/>
                     <span className="input-group-text" id="search-btn">Search</span>
-                </div>
-                <form className="d-flex align-items-center">
-                    <FontAwesomeIcon icon={faHeart} className="mx-2 fs-2"></FontAwesomeIcon>
+                </form>
+                <div className={`d-flex align-items-center`}>
+                    <FontAwesomeIcon icon={faHeart} className={`mx-2 fs-2 ${classes['responsive_display_none']}`}></FontAwesomeIcon>
                     <div className="cart d-flex align-items-center mx-3 cursor-pointer mx-2">
                         <div className="cart-icon mx-2">
                             <FontAwesomeIcon icon={faCartPlus} className="fs-2"></FontAwesomeIcon>
@@ -47,7 +45,7 @@ function MiddleBar() {
                             <FontAwesomeIcon icon={faChevronDown} className="mx-2"></FontAwesomeIcon>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </nav>
     )

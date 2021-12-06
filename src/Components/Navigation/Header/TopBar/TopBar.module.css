@@ -23,11 +23,7 @@
     margin-right: 30px
 }
 
-/* 
-    Something here
-*/
-
-@media only screen and (min-width: 991px) {
+@media only screen and (max-width: 991px) {
     .display_none {
       display: none !important;
     }

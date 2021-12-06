@@ -1,0 +1,9 @@
+.cart-text {
+    width: 100px
+}
+
+@media only screen and (max-width: 991px) {
+    .responsive_display_none {
+        display: none !important;
+    }
+}
