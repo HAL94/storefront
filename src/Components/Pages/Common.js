@@ -11,6 +11,7 @@ function Common() {
         <Row>
           <Col className={classes["bodypart"]}>
             <h1>Welcome to Best Basket</h1>
+            <i data-feather="circle"></i>
           </Col>
         </Row>
       </Container>
