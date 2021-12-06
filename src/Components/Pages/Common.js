@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 // import Form from "react-bootstrap/Form";
 import classes from "./Cmm.module.css";
 import Categories from "Components/Categories/Categories";
+
 function Common() {
   return (
     <div>
@@ -12,7 +13,6 @@ function Common() {
         <Row>
           <Col className={classes["bodypart"]}>
             <h1>Welcome to Best Basket</h1>
-            <i data-feather="circle"></i>
           </Col>
         </Row>
       </Container>

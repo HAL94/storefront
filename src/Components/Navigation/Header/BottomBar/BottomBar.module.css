@@ -1,8 +1,10 @@
 .font_white {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .buy_again_btn {
-    background: #FC9231 !important;
-    border-radius: 42px !important;
+  background: #fc9231 !important;
+  border-radius: 16px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
 }
