@@ -24,7 +24,7 @@
 }
 
 @media only screen and (max-width: 991px) {
-    .display_none {
+    .responsive_display_none {
       display: none !important;
     }
   }
