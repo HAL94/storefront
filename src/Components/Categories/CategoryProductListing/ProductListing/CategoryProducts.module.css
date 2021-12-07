@@ -1,0 +1,32 @@
+.product_box {
+  text-align: center;
+  transform: scale(1);
+  padding: 14px;
+  transition: 0.5s transform;
+}
+.product_box:hover {
+  padding: 14px;
+  transform: scale(1.05);
+  background: #ffffff;
+  box-shadow: 0px 0px 63px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 13px;
+}
+
+.product_box img {
+  width: 100%;
+  max-width: 125px;
+}
+.product_box h4 {
+  font-size: 12px;
+  font-weight: normal;
+}
+.product_box h2 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.product_box h2 span {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 3px;
+}

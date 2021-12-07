@@ -1,13 +1,16 @@
-import React from 'react'
-import ProductListingHeader from './ProductListingHeader/ProductListingHeader'
+import React from "react";
 
+import ProductListingHeader from "./ProductListingHeader/ProductListingHeader";
+
+
+import CategoryProducts from "./ProductListing/CategoryProducts";
 function CategoryProductListing() {
-    return (
-        <>
-            <ProductListingHeader/>  
-            <span>products here</span>
-        </>
-    )
+  return (
+    <>
+      <ProductListingHeader />
+      <CategoryProducts />
+    </>
+  );
 }
 
-export default CategoryProductListing
+export default CategoryProductListing;

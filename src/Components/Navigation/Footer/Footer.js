@@ -22,7 +22,7 @@ function Footer() {
       <Container>
         <Row className={`${classes["news_letter"]} pt-3 `}>
           <Col xs={12} sm={12} md={4} className="text-center py-xs-3">
-            <img src={Logo} alt="" srcset="" />
+            <img src={Logo} alt="" />
           </Col>
           <Col xs={12} sm={6} md={4} className="">
             <Form>
