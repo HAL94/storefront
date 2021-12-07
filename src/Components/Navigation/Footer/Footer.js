@@ -21,10 +21,10 @@ function Footer() {
     <div className={`${classes["section"]}`}>
       <Container>
         <Row className={`${classes["news_letter"]} pt-3`}>
-          <Col className="text-center">
+          <Col sm={12} md={4} className="text-center mb-sm-5">
             <img src={Logo} alt="" srcset="" />
           </Col>
-          <Col>
+          <Col sm={12} md={4} className="">
             <Form>
               <Form.Group
                 className="mb-3 text-center"
@@ -41,7 +41,7 @@ function Footer() {
               </Form.Group>
             </Form>
           </Col>
-          <Col>
+          <Col sm={12} md={4}>
             <div className={classes["contact_us"]}>
               <h3>GET IN TOUCH</h3>
               <span>With our support channels </span>
@@ -53,7 +53,7 @@ function Footer() {
 
       <Container fluid>
         <Row>
-          <Col>
+          <Col sm={6} md={4}>
             <div className={`${classes["footer_info_list"]}`}>
               <h4>MY ACCOUNT</h4>
               <ul>
@@ -63,7 +63,7 @@ function Footer() {
               </ul>
             </div>
           </Col>
-          <Col>
+          <Col sm={6} md={4}>
             <div className={`${classes["footer_info_list"]}`}>
               <h4>INFOMATION</h4>
               <ul>
@@ -73,7 +73,7 @@ function Footer() {
               </ul>
             </div>
           </Col>
-          <Col>
+          <Col sm={12} md={4}>
             <div className={`${classes["footer_info_list"]}`}>
               <h4>POLICIES</h4>
               <ul>
