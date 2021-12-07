@@ -20,11 +20,11 @@ function Footer() {
     /*  <div className={`${classes["section"]} test`}> */
     <div className={`${classes["section"]}`}>
       <Container>
-        <Row className={`${classes["news_letter"]} pt-3`}>
-          <Col sm={12} md={4} className="text-center mb-sm-5">
+        <Row className={`${classes["news_letter"]} pt-3 `}>
+          <Col xs={12} sm={12} md={4} className="text-center py-xs-3">
             <img src={Logo} alt="" srcset="" />
           </Col>
-          <Col sm={12} md={4} className="">
+          <Col xs={12} sm={6} md={4} className="">
             <Form>
               <Form.Group
                 className="mb-3 text-center"
@@ -41,7 +41,7 @@ function Footer() {
               </Form.Group>
             </Form>
           </Col>
-          <Col sm={12} md={4}>
+          <Col xs={12} sm={6} md={4}>
             <div className={classes["contact_us"]}>
               <h3>GET IN TOUCH</h3>
               <span>With our support channels </span>
@@ -53,7 +53,7 @@ function Footer() {
 
       <Container fluid>
         <Row>
-          <Col sm={6} md={4}>
+          <Col xs={4} sm={4} md={3}>
             <div className={`${classes["footer_info_list"]}`}>
               <h4>MY ACCOUNT</h4>
               <ul>
@@ -63,7 +63,7 @@ function Footer() {
               </ul>
             </div>
           </Col>
-          <Col sm={6} md={4}>
+          <Col xs={4} sm={4} md={3}>
             <div className={`${classes["footer_info_list"]}`}>
               <h4>INFOMATION</h4>
               <ul>
@@ -73,7 +73,7 @@ function Footer() {
               </ul>
             </div>
           </Col>
-          <Col sm={12} md={4}>
+          <Col xs={4} sm={4} md={3}>
             <div className={`${classes["footer_info_list"]}`}>
               <h4>POLICIES</h4>
               <ul>
@@ -85,7 +85,7 @@ function Footer() {
               </ul>
             </div>
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={3}>
             <div className={`${classes["footer_social_media"]}`}>
               <h4>Social Media</h4>
               <div>
@@ -108,16 +108,15 @@ function Footer() {
       <div className={classes["copyrights"]}>
         <Container fluid>
           <Row>
-            <Col sm={6}>
+            <Col xs={12} sm={6} md={6}>
               <div className={classes["copyright_right"]}>
                 <p>© 2021 Ramzaula. All Rights Reserved</p>
               </div>
             </Col>
-            <Col sm={6}>
+            <Col xs={12} sm={6} md={6}>
               <div className={classes["copyright_left"]}>
                 <p>Pay Securely with us</p>
                 <div>
-                  <img src={visalogo} alt="" /> &nbsp;
                   <img src={Mastercard} alt="" />
                   &nbsp;
                   <img src={stcpay} alt="" />
