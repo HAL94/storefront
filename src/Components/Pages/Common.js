@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import Form from "react-bootstrap/Form";
 import classes from "./Cmm.module.css";
-import Categories from "Components/Categories/Categories";
+// import Categories from "Components/Categories/Categories";
 
 function Common() {
   return (

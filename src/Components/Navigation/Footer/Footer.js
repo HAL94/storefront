@@ -22,7 +22,7 @@ function Footer() {
       <Container>
         <Row className={`${classes["news_letter"]} pt-3`}>
           <Col className="text-center">
-            <img src={Logo} alt="" srcset="" />
+            <img src={Logo} alt="" />
           </Col>
           <Col>
             <Form>
@@ -89,16 +89,16 @@ function Footer() {
             <div className={`${classes["footer_social_media"]}`}>
               <h4>Social Media</h4>
               <div>
-                <img src={facebook} alt="" srcset="" />
-                <img src={google} alt="" srcset="" />
-                <img src={instagram} alt="" srcset="" />
+                <img src={facebook} alt="" />
+                <img src={google} alt="" />
+                <img src={instagram} alt="" />
               </div>
             </div>
             <div className={`${classes["footer_app_store"]} mt-4`}>
               <h4>Applications</h4>
               <div>
-                <img src={Googleplay} alt="" srcset="" />
-                <img src={Applestore} alt="" srcset="" />
+                <img src={Googleplay} alt="" className="my-2" />
+                <img src={Applestore} alt="" className="my-2"/>
               </div>
             </div>
           </Col>
@@ -124,7 +124,7 @@ function Footer() {
                   &nbsp;
                   <img src={Mada} alt="" />
                   &nbsp;
-                  <img src={visalogo} alt="" srcset="" />
+                  <img src={visalogo} alt="" />
                   &nbsp;
                 </div>
               </div>
