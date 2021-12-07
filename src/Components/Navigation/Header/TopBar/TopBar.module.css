@@ -2,29 +2,9 @@
   background: #efefef;
 }
 
-.top-bar-icon {
-  margin-right: 10px;
-  font-size: 32px;
-  color: rgb(7, 56, 110);
-}
-
-.login-btn {
-  background: #fff;
-  padding: 5px 14px;
-  border: 1px solid rgb(7, 56, 110);
-  outline: none;
-  text-decoration: none;
-  color: rgb(7, 56, 110);
-  border-radius: 3px;
-  font-weight: 700;
-}
-
-.navbar-nav li {
-  margin-right: 30px;
-}
 
 @media only screen and (max-width: 991px) {
-  .display_none {
+  .responsive_display_none {
     display: none !important;
   }
 }

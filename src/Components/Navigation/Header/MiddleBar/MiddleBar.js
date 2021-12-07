@@ -7,7 +7,7 @@ import LeftMiddleBar from "./LeftMiddleBar/LeftMiddleBar";
 import SearchForm from "./SearchForm/SearchForm";
 import CartComponent from "./CartComponent/CartComponent";
 
-function MiddleBarTemp() {
+function MiddleBar() {
   return (
     <Navbar expand="lg" className="p-0">
       <Container fluid>
@@ -21,4 +21,4 @@ function MiddleBarTemp() {
   );
 }
 
-export default MiddleBarTemp;
+export default MiddleBar;

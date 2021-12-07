@@ -1,0 +1,25 @@
+.form_input::placeholder {
+    font-size: 12px !important;
+}
+.form-input {
+    width: 50px !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.price_filter_btn {
+    color: #000 !important;
+    font-weight: 700 !important;
+    align-self: baseline;
+    margin-top: 4px;
+}

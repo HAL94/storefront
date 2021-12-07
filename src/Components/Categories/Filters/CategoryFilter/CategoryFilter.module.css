@@ -1,3 +1,8 @@
 .filter_item {
     font-size: 12px;
+    transition: font-weight 0.1s linear;
+}
+
+.filter_item:hover {
+    font-weight: 700;
 }

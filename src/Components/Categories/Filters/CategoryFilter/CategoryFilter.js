@@ -10,11 +10,11 @@ const categoryFilters = [
     {'catName': 'Hair Care', 'productCount': 3050},
     {'catName': 'Hair Care', 'productCount': 3050},
     {'catName': 'Health Care', 'productCount': 1414},
-    {'catName': 'Fragrance', 'productCount': 789},
+    {'catName': 'Fragrance', 'productCount': 789}
+];
 
-]
 function CategoryFilter() {
-    const catFilters = categoryFilters.map((catFilter, idx) => {
+    const catFiltersComponents = categoryFilters.map((catFilter, idx) => {
         return (
             <li key={idx} className={`d-flex justify-content-between align-items-center ${classes['filter_item']} my-1 cursor_pointer`}>
                 <span className="cat_filter_text">{catFilter.catName}</span>
@@ -23,10 +23,10 @@ function CategoryFilter() {
         );
     })
     return (
-        <div className="filter_option p-4">
+        <div className="filter_option p-2 filter_item_mg">
             <span className='filter_title'>Category</span>
             <ul className="list-group">
-                {catFilters}
+                {catFiltersComponents}
             </ul>
         </div>
     )

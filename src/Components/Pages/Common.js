@@ -12,7 +12,8 @@ function Common() {
       <Container fluid className="my-4">
         <Row>
           <Col className={classes["bodypart"]}>
-            <h1>Welcome to Best Basket</h1>
+            {/* <h1>Welcome to Best Basket</h1> */}
+            <Categories/>
           </Col>
         </Row>
       </Container>
