@@ -1,0 +1,8 @@
+.form_input::placeholder {
+    font-size: 12px !important;
+}
+.search_brand_icon {
+    top: 16px;
+    right: 12px;
+    z-index: 100;
+}

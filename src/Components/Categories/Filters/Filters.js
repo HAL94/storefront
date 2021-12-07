@@ -1,10 +1,18 @@
 import React from 'react'
-import CategoryFilter from './CategoryFilter/CategoryFilter'
+import AvailabilityFilter from './AvailabilityFilter/AvailabilityFilter';
+import BrandFilter from './BrandFilter/BrandFilter';
+import CategoryFilter from './CategoryFilter/CategoryFilter';
+import DiscountFilter from './DiscountFilter/DiscountFilter';
+import PriceFilter from './PriceFilter/PriceFilter';
 function Filters() {
     return (
-        <div>
+        <>
             <CategoryFilter/>
-        </div>
+            <BrandFilter/>
+            <PriceFilter/>
+            <DiscountFilter/>
+            <AvailabilityFilter/>
+        </>
     )
 }
 
