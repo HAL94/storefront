@@ -1,9 +1,16 @@
 .cart-text {
     width: 100px
 }
-
+.cart-total-price{
+    font-size: 14px ;
+    font-weight: bold;
+}
 @media only screen and (max-width: 991px) {
     .responsive_display_none {
         display: none !important;
+    }
+
+    .responsive_justify_right {
+        justify-content: right;
     }
 }

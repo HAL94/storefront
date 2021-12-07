@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../../../../Assets/app-logo.png';
+import Logo from '../../../../../Assets/app-logo.svg';
 
 import DeliveryComponent from '../../Shared/DeliveryComponent/DeliveryComponent';
 import classes from './LeftMiddleBar.module.css';

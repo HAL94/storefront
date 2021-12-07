@@ -1,42 +1,33 @@
-import { faGlobe, faArrowAltCircleRight, faMobile } from "@fortawesome/free-solid-svg-icons";
+import React from 'react'
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 
-// Feather Icon currently not working...
-// import FeatherIcon from 'feather-icons-react';
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import FeatherIcon from 'feather-icons-react';
+import AuthButton from '../Shared/AuthButton/AuthButton';
 import classes from './TopBar.module.css';
 
-const TopBar = (props) => {
+function TopBar() {
     return (
-        <nav className={`navbar navbar-expand-lg navbar-light ${classes['custom-light-bg']} ${classes['display_none']}`}>
-            <div className="container-fluid">
+        <Navbar className={`${classes["custom-light-bg"]} ${classes['responsive_display_none']}` } >
+            <Container fluid>
                 <span className="top-bar-download">Order Online 24/7</span>
-                <div className="d-flex ml-auto">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-row">
-                        <li className="nav-item d-flex align-items-center mx-3">
-                            <a className="nav-link d-flex align-items-center" aria-current="page" href="#!">
-                                <FontAwesomeIcon icon={faMobile} className={classes['top-bar-icon']}></FontAwesomeIcon>
-                                <span>Download App</span>
-                            </a>
-                        </li>
-                        <li className="nav-item d-flex align-items-center mx-3">
-                            <a className="nav-link d-flex align-items-center" href="#!">
-                                <FontAwesomeIcon icon={faGlobe} className={classes['top-bar-icon']}></FontAwesomeIcon>
-                                <span>English</span>
-                            </a>
-                        </li>
-                        <li className="nav-item d-flex align-items-center mx-3">
-                            <a href="#!" className={`${classes['login-btn']} d-flex align-items-center`}>
-                                <FontAwesomeIcon icon={faArrowAltCircleRight} className={classes['top-bar-icon']}></FontAwesomeIcon>
-                                <span>Login / Register</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+                <Nav>
+                    <Nav.Link href="#home" className="d-flex align-items-center">
+                        <FeatherIcon icon="smartphone" size="16" className="mx-2" />
+                        <span>Download App</span>
+                    </Nav.Link>
+                    <Nav.Link href="#home" className="d-flex align-items-center">
+                        <FeatherIcon icon="globe" size="16" className="mx-2" />
+                        <span>English</span>
+                    </Nav.Link>
+                    <Nav.Link>
+                        <AuthButton/>
+                    </Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    )
 }
 
-export default TopBar;
+export default TopBar
