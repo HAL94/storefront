@@ -1,49 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useSelector } from 'react-redux'
 import { Col, Container, Row } from "react-bootstrap";
 import classes from "./CategoryProducts.module.css";
 // import product from "Assets/apples.jpg";
+// import CategoryProductContext from 'Store-h/category-product-context';
 
 function CategoryProducts() {
-  const [data, setData] = useState([]);
-  const getData = async () => {
-    /**
-     * 
-     * Classic JS Approach
-     */
-
-    // fetch("products_local.json", {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json",
-    //   },
-    // })
-    //   .then(function (response) {
-    //     console.log(response);
-    //     return response.json();
-    //   })
-    //   .then(function (myJson) {
-    //     console.log(myJson);
-    //     setData(myJson);
-    //   });
-
-    /** Modern ES6 Approach */
-    const response = await fetch("products_local.json");
-    const data = await response.json();
-    setData(data);
-  };
-  useEffect(() => {
-    const getDataTemp = async () => {
-      await getData();
-    }
-
-    getDataTemp();
-  }, []);
-
+  const displayedProducts = useSelector(state => state.categoryProducts.displayedProducts)
+  // console.log(displayedProducts);
   return (
     <div>
       <Container>
         <Row>
-          {data.map((item) => (
+          {displayedProducts.map((item) => (
             <Col md={3} key={item.id}>
               <div className={classes["product_box"]}>
                 <img src={item.image} alt={item.item} />
