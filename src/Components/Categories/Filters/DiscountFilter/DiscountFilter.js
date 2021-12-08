@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Form from 'react-bootstrap/Form';
-
 const discountFilters = [
     { 'discountTitle': '50% or more', 'discountPercentage': 50, 'selected': false },
     { 'discountTitle': '40% or more', 'discountPercentage': 40, 'selected': false },
@@ -15,7 +14,7 @@ const discountFilters = [
 function DiscountFilter() {
     const discountFiltersComponents = discountFilters.map((discount, idx) => {
         return (
-            <li key={idx} className="cursor_pointer d-flex justify-content-between align-items-center">
+            <li key={idx} className={`cursor_pointer d-flex justify-content-between align-items-center filter_item`}>
                 <Form.Group>
                     <Form.Check type="checkbox" label={discount.discountTitle} selected={discount.selected} className="mr-1" />
                 </Form.Group>
@@ -24,7 +23,7 @@ function DiscountFilter() {
     })
 
     return (
-        <div className="filter_option p-2 filter_item_mg">
+        <div className={`filter_option p-2 filter_item_mg`}>
             <span className='filter_title'>Discounts</span>
             <Form className="mb-1">
                 <ul className="list-group mt-3">

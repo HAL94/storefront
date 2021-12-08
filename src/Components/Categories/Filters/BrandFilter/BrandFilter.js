@@ -18,7 +18,7 @@ const brandFilters = [
 function BrandFilter() {
     const brandFiltersComponents = brandFilters.map((brand, idx) => {
         return (
-            <li key={idx} className="cursor_pointer d-flex justify-content-between align-items-center">
+            <li key={idx} className={`d-flex justify-content-between align-items-center filter_item`}>
                 <Form.Group>
                     <Form.Check type="checkbox" label={brand.brandName} selected={brand.selected} className="mr-1" />
                 </Form.Group>

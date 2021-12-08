@@ -8,7 +8,7 @@ function AvailabilityFilter() {
             <Form className="mb-1">
                 <ul className="list-group mt-3">
                     <Form.Group>
-                        <Form.Check type="checkbox" label={'Include Out of Stock'} className="mr-1" />
+                        <Form.Check type="checkbox" label={'Include Out of Stock'} className="mr-1 filter_item" />
                     </Form.Group>
                 </ul>
             </Form>

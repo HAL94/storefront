@@ -1,7 +1,5 @@
 import React from 'react'
 
-import classes from './CategoryFilter.module.css';
-
 const categoryFilters = [
     {'catName': 'Health & Personal Care', 'productCount': 9840},
     {'catName': 'Bath & Body', 'productCount': 1243},
@@ -16,7 +14,7 @@ const categoryFilters = [
 function CategoryFilter() {
     const catFiltersComponents = categoryFilters.map((catFilter, idx) => {
         return (
-            <li key={idx} className={`d-flex justify-content-between align-items-center ${classes['filter_item']} my-1 cursor_pointer`}>
+            <li key={idx} className={`d-flex justify-content-between align-items-center filter_item my-1 cursor_pointer`}>
                 <span className="cat_filter_text">{catFilter.catName}</span>
                 <span className="cat_filter_number">({catFilter.productCount})</span>
             </li>
