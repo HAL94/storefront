@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import classes from "./CategoryProducts.module.css";
-// import product from "Assets/apples.jpg";
 
 function CategoryProducts() {
   const [data, setData] = useState([]);
   const getData = async () => {
-    /**
-     * 
-     * Classic JS Approach
-     */
+    /* Classic JS Approach  */
 
     // fetch("products_local.json", {
     //   headers: {
@@ -27,14 +23,14 @@ function CategoryProducts() {
     //   });
 
     /** Modern ES6 Approach */
-    const response = await fetch("products_local.json");
+    const response = await fetch("data/products_local.json");
     const data = await response.json();
     setData(data);
   };
   useEffect(() => {
     const getDataTemp = async () => {
       await getData();
-    }
+    };
 
     getDataTemp();
   }, []);
