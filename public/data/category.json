@@ -1,0 +1,74 @@
+[
+ {
+   "category": 1,
+   "category_name": "Cooking Supplies"
+ },
+ {
+   "category": 2,
+   "category_name": "Bakery"
+ },
+ {
+   "category": 3,
+   "category_name": "Fruits & Vegetables"
+ },
+ {
+   "category": 4,
+   "category_name": "Frozen Food"
+ },
+ {
+   "category": 5,
+   "category_name": "Fresh Food"
+ },
+ {
+   "category": 6,
+   "category_name": "Snacks"
+ },
+ {
+   "category": 7,
+   "category_name": "Organic & Healthy Food"
+ },
+ {
+   "category": 8,
+   "category_name": "Beverages"
+ },
+ {
+   "category": 9,
+   "category_name": "Water"
+ },
+ {
+   "category": 10,
+   "category_name": "Home Cleaning Products"
+ },
+ {
+   "category": 11,
+   "category_name": "Dairy products & eggs"
+ },
+ {
+   "category": 12,
+   "category_name": "Beauty & Personal Care"
+ },
+ {
+   "category": 13,
+   "category_name": "Baby Products"
+ },
+ {
+   "category": 14,
+   "category_name": "Home & Garden"
+ },
+ {
+   "category": 15,
+   "category_name": "Canned Products"
+ },
+ {
+   "category": 16,
+   "category_name": "Jam & honey & spreads"
+ },
+ {
+   "category": 17,
+   "category_name": "Pet Supplies"
+ },
+ {
+   "category": 18,
+   "category_name": "Breakfast Cereals"
+ }
+]

@@ -40,7 +40,7 @@ function CategoryProducts() {
       <Container>
         <Row>
           {data.map((item) => (
-            <Col md={3} key={item.id}>
+            <Col xs={12} sm={6} md={4} lg={3} key={item.id}>
               <div className={classes["product_box"]}>
                 <img src={item.image} alt={item.item} />
                 <h4>{item.item}</h4>

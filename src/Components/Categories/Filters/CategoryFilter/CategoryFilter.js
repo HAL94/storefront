@@ -1,33 +1,38 @@
-import React from 'react'
-
-const categoryFilters = [
-    {'catName': 'Health & Personal Care', 'productCount': 9840},
-    {'catName': 'Bath & Body', 'productCount': 1243},
-    {'catName': 'Shaving & Hair Removal', 'productCount': 512},
-    {'catName': 'Skin Care', 'productCount': 2247},
-    {'catName': 'Hair Care', 'productCount': 3050},
-    {'catName': 'Hair Care', 'productCount': 3050},
-    {'catName': 'Health Care', 'productCount': 1414},
-    {'catName': 'Fragrance', 'productCount': 789}
-];
+import React, { useState, useEffect } from "react";
 
 function CategoryFilter() {
-    const catFiltersComponents = categoryFilters.map((catFilter, idx) => {
-        return (
-            <li key={idx} className={`d-flex justify-content-between align-items-center filter_item my-1 cursor_pointer`}>
-                <span className="cat_filter_text">{catFilter.catName}</span>
-                <span className="cat_filter_number">({catFilter.productCount})</span>
-            </li>
-        );
-    })
+  const [data, setData] = useState([]);
+  const getData = async () => {
+      /** Modern ES6 Approach */
+    const response = await fetch("data/category.json");
+    const data = await response.json();
+    setData(data);
+  };
+  useEffect(() => {
+    const getDataTemp = async () => {
+      await getData();
+    };
+
+    getDataTemp();
+  }, []);
+
+  const catFiltersComponents = data.map((catFilter) => {
     return (
-        <div className="filter_option p-2 filter_item_mg">
-            <span className='filter_title'>Category</span>
-            <ul className="list-group">
-                {catFiltersComponents}
-            </ul>
-        </div>
-    )
+      <li
+        key={catFilter.category}
+        className={`d-flex justify-content-between align-items-center filter_item my-1 cursor_pointer`}
+      >
+        <span className="cat_filter_text">{catFilter.category_name}</span>
+        {/* <span className="cat_filter_number">({catFilter.productCount})</span> */}
+      </li>
+    );
+  });
+  return (
+    <div className="filter_option p-2 filter_item_mg">
+      <span className="filter_title">Category</span>
+      <ul className="list-group">{catFiltersComponents}</ul>
+    </div>
+  );
 }
 
-export default CategoryFilter
+export default CategoryFilter;
