@@ -10,7 +10,6 @@ function ProductListingHeader() {
     const dispatch = useDispatch();
 
     const onSortSelectHandler = (event) => {
-        console.log(event.target.value);
         const sortDirection = +event.target.value;
         if (sortDirection === 2) { 
             dispatch(categoryProductActions.filterProductsLowToHigh(sortDirection))

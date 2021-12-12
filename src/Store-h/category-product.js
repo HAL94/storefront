@@ -1,10 +1,26 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialCategoryProductState = { 
     data: [],
     displayedProducts: [],
-    sortDirection: 0
+    sortDirection: 0,
+    status: 'idle'
 };
+
+export const getProducts = createAsyncThunk(
+    'category_products/getProducts',
+    async () => {
+        return new Promise(async (resolve) => {
+            
+            const response = await fetch("products_local.json");
+            const data = await response.json();
+            // console.log(data);
+            setTimeout(() => {
+                resolve(data);
+            }, 1000);
+        })        
+    }
+) 
 
 const sortAscending = (list) => {
     const ascCompare = ( a, b ) => {
@@ -72,8 +88,25 @@ const categoryProductsSlice = createSlice({
             const sortedProducts = sortDescending(state.displayedProducts);
             state.displayedProducts = sortedProducts;
         }
+    },
+    extraReducers: (builder) => {
+        builder
+        .addCase(getProducts.pending, (state) => {
+            state.status = 'loading';
+        })
+        .addCase(getProducts.fulfilled, (state, action) => {
+            state.data = action.payload;
+            state.displayedProducts = action.payload;
+            state.status = 'fulfilled';
+        })
+        .addCase(getProducts.rejected, (state) => {
+            state.status = 'rejected';
+        })
     }
 });
 
+export const selectFetchProductsStatus = (state) => state.categoryProducts.status;
+
 export const categoryProductActions = categoryProductsSlice.actions;
+
 export default categoryProductsSlice.reducer;

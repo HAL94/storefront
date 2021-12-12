@@ -10,9 +10,8 @@ function SearchForm() {
 
     const onSearchSubmitHandler = (event) => {
         event.preventDefault();
-        console.log(searchInputRef);
         const searchTerm = searchInputRef.current.value;
-        console.log(searchTerm);
+        // console.log(searchTerm);
         dispatch(categoryProductActions.filterProductsBySearchTerm(searchTerm));
         
     }

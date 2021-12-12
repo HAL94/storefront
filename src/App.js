@@ -2,31 +2,25 @@ import Footer from "./Components/Navigation/Footer/Footer";
 import Header from "./Components/Navigation/Header/Header";
 import Common from "./Components/Pages/Common";
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { categoryProductActions } from 'Store-h/category-product';
-
-const getData = async () => {    
-  /** Modern ES6 Approach */
-  const response = await fetch("products_local.json");
-  const data = await response.json();
-  // console.log(data);
-  return data;
-};
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts, selectFetchProductsStatus } from 'Store-h/category-product';
+import LoadingSpinner from "Components/Shared/LoadingSpinner";
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const fetchProductsStatus = useSelector(selectFetchProductsStatus);
+
   useEffect(() => {
-    const fetchData = async () => {
-      const products = await getData();
-      dispatch(categoryProductActions.setProducts(products));
+    if (fetchProductsStatus === 'idle') {
+      dispatch(getProducts());
     }
-    fetchData();
-  }, [dispatch])
+  }, [fetchProductsStatus, dispatch])
 
   return (
     <>
       <Header />
-      <Common />
+      {fetchProductsStatus === 'fulfilled' && <Common />}
+      {fetchProductsStatus === 'pending' && <LoadingSpinner/>}
       <Footer />
     </>
   );
